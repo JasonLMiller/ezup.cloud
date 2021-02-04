@@ -3,11 +3,15 @@
 <head>
 <meta charset="utf-8">
 <title>EZUP.CLOUD 28 Days: Day 3</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script async src="https://cdn.ampproject.org/v0.js"></script> 
 <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script> 
 <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script> 
-<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script> 
+<script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
 <meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style amp-boilerplate></style>
 <noscript>
 <style amp-boilerplate>
@@ -28,35 +32,158 @@ body {
     margin: 0 auto;
     width: 20%;
 }
-h1 {
+.container-cloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+}
+.fill {
+    height: 100vh;
+    margin: auto;
+}
+.border {
+    border: 20px solid #ddd;
+    box-sizing: border-box;
+}
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-center-item {
+    flex: none;
+    max-width: 80%;
+}
+#clockdiv {
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 26px;
+    width: 100%;
+}
+#clockdiv > div {
+    padding: 10px;
+    display: inline-block;
+}
+#clockdiv div > span {
+    padding: 10px;
+    display: inline-block;
     font-family: brevier, sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+.smalltext {
+    font-size: 12px;
+    font-family: roboto-mono, monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+h1 {
+    font-family: roboto-mono, monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+.text-center {
+    text-align: center;
+}
+.row {
+    display: flex;
+}
+.row_cell {
+    flex: 1
+}
+.fixed-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+amp-img.contain img {
+    object-fit: contain;
 }
 </style>
 <link rel="stylesheet" href="https://use.typekit.net/xib2ppc.css">
 </head>
 
 <body>
-<h1 style="text-align: center">28 Days - 28 Projects</h1>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="logo-ani">
-  <amp-position-observer on="scroll:spinAnimation.seekTo(percent=event.percent)" 
+<div class="container-cloud fill border">
+  <div class="element" style="width: 80vw;height: 50vh;margin: 0 auto;">
+    <div class="content-center">
+      <div class="content-center-item">
+        <div class="wrapper">
+          <h1 class="text-center">Projects Remaining</h1>
+          <div id="clockdiv" class="text-center">
+            <div style="display: none;"> <span class="weeks"></span>
+              <div class="smalltext">Weeks</div>
+            </div>
+            <div> <span class="days"></span>
+              <div class="smalltext">Days</div>
+            </div>
+            <div> <span class="hours"></span>
+              <div class="smalltext">Hours</div>
+            </div>
+            <div> <span class="minutes"></span>
+              <div class="smalltext">Minutes</div>
+            </div>
+            <div> <span class="seconds"></span>
+              <div class="smalltext">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-cloud fill border">
+  <div class="logo-ani">
+    <amp-position-observer on="scroll:spinAnimation.seekTo(percent=event.percent)" 
 						 intersection-ratios="0.5" 
 						 layout="nodisplay"> </amp-position-observer>
-  <amp-img id="mainLogoImage" width="369" height="336" layout="responsive" src="https://www.ezup.com/media/logo/stores/1/logo-large.png" alt=""></amp-img>
+    <amp-img id="mainLogoImage" width="369" height="336" layout="responsive" src="https://www.ezup.com/media/logo/stores/1/logo-large.png" alt=""></amp-img>
+  </div>
 </div>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
+<div class="border">
+  <amp-img amp-fx="fade-in-scroll"
+  data-repeat
+		   data-margin-start="50%"
+  data-margin-end="80%"
+  width="1280"
+  height="873"
+  layout="responsive"
+  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
+  alt="clouds"></amp-img>
+</div>
+<div class="container-fluid">
+  <div class="row border">
+    <div class="row_cell">
+      <amp-img amp-fx="fade-in-scroll"
+  data-repeat
+  width="1280"
+  height="873"
+  layout="responsive"
+  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
+  alt="clouds"></amp-img>
+    </div>
+    <div class="row_cell">
+      <amp-img amp-fx="fade-in-scroll"
+  data-repeat
+  width="1280"
+  height="873"
+  layout="responsive"
+  src="https://images.unsplash.com/photo-1473806189829-9641421a59f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=75ddee8b694c5bef8cb935f6d0effa3a&auto=format&fit=crop&w=1650&q=80"
+  alt="clouds"></amp-img>
+    </div>
+    <div class="row_cell"><!--<img src="https://via.placeholder.com/767x400/111111/fff" class="img-responsive" alt="">-->
+      <amp-img amp-fx="fade-in-scroll"
+  data-repeat
+  width="1280"
+  height="873"
+  layout="responsive"
+  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
+  alt="clouds"></amp-img>
+    </div>
+  </div>
+</div>
 <amp-animation id="spinAnimation" layout="nodisplay"> 
   <script type="application/json">
       {
@@ -74,5 +201,54 @@ h1 {
       }
     </script> 
 </amp-animation>
+<div class="spacer"></div>
+<script>
+		function getTimeRemaining(endtime) {
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  const weeks = Math.floor(total / (1000 * 60 * 60 * 24) / 7);
+  
+  return {
+    total,
+    days,
+    hours,
+    minutes,
+    seconds,
+	weeks
+  };
+}
+
+function initializeClock(id, endtime) {
+  const clock = document.getElementById(id);
+  const daysSpan = clock.querySelector('.days');
+  const hoursSpan = clock.querySelector('.hours');
+  const minutesSpan = clock.querySelector('.minutes');
+  const secondsSpan = clock.querySelector('.seconds');
+  const weeksSpan = clock.querySelector('.weeks');
+
+  function updateClock() {
+    const t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+	weeksSpan.innerHTML = t.weeks;
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  const timeinterval = setInterval(updateClock, 1000);
+}
+
+const deadline = '2021-03-01'; //new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+	</script>
 </body>
 </html>
