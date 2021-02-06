@@ -1,0 +1,93 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 25 - Scroll Effects</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script async src="https://cdn.ampproject.org/v0.js"></script> 
+<script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script> 
+<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script> 
+<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script> 
+<script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.typekit.net/xib2ppc.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/effects.css">
+<link rel="stylesheet" href="css/splash.css">
+<link rel="stylesheet" href="css/countdown.css">
+<script async src="js/countdown.js"></script>
+</head>
+<body>
+<header class="header-fixed">
+  <h1 class="h1 text-uppercase"><a href="index.html">Project 28</a></h1>
+</header>
+<div class="main">
+  <div class="container-cloud fill">
+    <div class="logo-ani">
+      <amp-position-observer on="scroll:spinAnimation.seekTo(percent=event.percent)" 
+						 intersection-ratios="0.5" 
+						 layout="nodisplay"> </amp-position-observer>
+      <amp-img id="mainLogoImage" width="369" height="336" layout="responsive" src="https://www.ezup.com/media/logo/stores/1/logo-large.png" alt=""></amp-img>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="row_cell">
+        <amp-img amp-fx="fade-in-scroll"
+   data-repeat 
+		data-margin-start="50%"
+  data-margin-end="80%"
+  width="1280"
+  height="873"
+  layout="responsive"
+  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
+  alt="clouds"></amp-img>
+      </div>
+      <div class="row_cell">
+        <amp-img amp-fx="fade-in-scroll"
+  data-repeat
+  width="1280"
+  height="873"
+  layout="responsive"
+  src="https://images.unsplash.com/photo-1473806189829-9641421a59f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=75ddee8b694c5bef8cb935f6d0effa3a&auto=format&fit=crop&w=1650&q=80"
+  alt="clouds"></amp-img>
+      </div>
+      <div class="row_cell"><!--<img src="https://via.placeholder.com/767x400/111111/fff" class="img-responsive" alt="">-->
+        <amp-img amp-fx="fade-in-scroll"
+  data-repeat
+		 data-margin-start="30%"
+  data-margin-end="90%"
+  width="1280"
+  height="873"
+  layout="responsive"
+  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
+  alt="clouds"></amp-img>
+      </div>
+    </div>
+  </div>
+  <amp-animation id="spinAnimation" layout="nodisplay"> 
+    <script type="application/json">
+      {
+        "duration": "4",
+        "fill": "both",
+        "direction": "reverse",
+        "animations": [
+          {
+            "selector": "#mainLogoImage",
+            "keyframes": [
+              { "transform": "rotate(720deg)" }
+            ]
+          }
+        ]
+      }
+    </script> 
+  </amp-animation>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+</div>
+<footer class="footer"> </footer>
+</body>
+</html>

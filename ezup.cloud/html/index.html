@@ -12,330 +12,36 @@
 <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
 <meta name="viewport" content="width=device-width">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<style amp-boilerplate></style>
-<noscript>
-<style amp-boilerplate>
-body {
-    -webkit-animation: none;
-    -moz-animation: none;
-    -ms-animation: none;
-    animation: none
-}
-</style>
-</noscript>
-<style amp-custom>
-.spacer {
-    height: 30vh;
-    width: 90vw;
-}
-.logo-ani {
-    margin: 0 auto;
-    width: 20%;
-}
-.container-cloud {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffffff;
-}
-.fill {
-    height: 100vh;
-    margin: auto;
-}
-.border {
-    border: 20px solid #ddd;
-    box-sizing: border-box;
-}
-.content-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.content-center-item {
-    flex: none;
-    max-width: 95%;
-}
-#clockdiv {
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 26px;
-    width: 100%;
-}
-#clockdiv > div {
-    padding: 10px;
-    display: inline-block;
-}
-#clockdiv div > span {
-    padding: 0 10px 0 10px 0;
-    display: inline-block;
-    font-family: brevier, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.smalltext {
-    font-size: 12px;
-    font-family: roboto-mono, monospace;
-    font-weight: 500;
-    font-style: normal;
-}
-h1 {
-    font-family: roboto-mono, monospace;
-    font-weight: 700;
-    font-style: normal;
-}
-.text-center {
-    text-align: center;
-}
-.row {
-    display: flex;
-}
-.row_cell {
-    flex: 1
-}
-.fixed-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-}
-amp-img.contain img {
-    object-fit: contain;
-}
-
-@media (min-width: 768px) {
-.header-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 999;
-    -webkit-box-shadow: 0 0 3px rgba(60,72,88,0.15);
-    box-shadow: 0 0 3px rgba(60,72,88,0.15);
-    border-right: 1px solid #eaeaea;
-    height: 100vh;
-    width: 100px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    overflow: hidden;
-    padding: 5rem 3rem;
-}
-	.h1 {
-    -webkit-transform: rotate(-90deg) translateX(-100%);
-    -ms-transform: rotate(-90deg) translateX(-100%);
-    transform: rotate(-90deg) translateX(-100%);
-    font-family: 'Roboto mono', monospace;
-    -webkit-letter-spacing: 1px;
-    -moz-letter-spacing: 1px;
-    -ms-letter-spacing: 1px;
-    letter-spacing: 1px;
-    margin: 0;
-    -webkit-transform-origin: top left;
-    -ms-transform-origin: top left;
-    transform-origin: top left;
-    white-space: nowrap;
-}
-}
-
-@media (max-width: 767px) {
-.header-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 999;
-    -webkit-box-shadow: 0 0 3px rgba(60,72,88,0.15);
-    box-shadow: 0 0 3px rgba(60,72,88,0.15);
-    border-bottom: 1px solid #eaeaea;
-    height: 40px;
-    width: 100vw;
-	background-color: #f9f9f9;
-}
-	.h1 {
-   text-align: center;
-    font-family: 'Roboto mono', monospace;
-		
-    -webkit-letter-spacing: 1px;
-    -moz-letter-spacing: 1px;
-    -ms-letter-spacing: 1px;
-    letter-spacing: 1px;
-    margin: 0;
-
-
-}
-}
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: #f9f9f9;
-    -webkit-box-shadow: 0 0 3px rgba(60,72,88,0.15);
-    box-shadow: 0 0 3px rgba(60,72,88,0.15);
-}
-ul.days {
-    list-style: none;
-}
-ul.days > li {
-    font-size: 22px;
-    font-family: roboto-mono, monospace;
-    font-weight: 700;
-    font-style: normal;
-}
-.ejNBCe {
-    font-weight: 500;
-    color: #000;
-    -webkit-letter-spacing: 1px;
-    -moz-letter-spacing: 1px;
-    -ms-letter-spacing: 1px;
-    letter-spacing: 1px;
-    color: #ccc;
-    display: inline-block;
-    margin-right: 2rem;
-}
-.cWDGRc {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-* {
-    box-sizing: border-box;
-}
-.kBKRuS {
-    font-weight: 500;
-    color: #000;
-    letter-spacing: 1px;
-    line-height: 1.2;
-}
-.kBKRuS:hover {
-    background-color: rgba(0,0,0,0.03);
-    color: #000;
-}
-.kBKRuS {
-    font-weight: 500;
-    color: #000;
-    -webkit-letter-spacing: 1px;
-    -moz-letter-spacing: 1px;
-    -ms-letter-spacing: 1px;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: flext-start;
-    -webkit-justify-content: flext-start;
-    -ms-flex-pack: flext-start;
-    justify-content: flext-start;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    padding: 1rem 1vw;
-}
-a {
-    text-decoration: none;
-}
-a:focus, a:hover {
-    color: #23527c;
-    text-decoration: none;
-}
-</style>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/effects.css">
+<link rel="stylesheet" href="css/splash.css">
+<link rel="stylesheet" href="css/countdown.css">
+<script async src="js/countdown.js"></script>
 <link rel="stylesheet" href="https://use.typekit.net/xib2ppc.css">
 </head>
-
 <body>
 <header class="header-fixed">
   <h1 class="h1 text-uppercase">Project 28</h1>
 </header>
-<div class="container-cloud fill">
-  <div class="element" style="width: 99vw;">
-    <div class="content-center">
-      <div class="content-center-item">
-        <div class="wrapper">
-          <ul class="days">
-            <li><a class="sc-gqjmRU kBKRuS" href=""><span class="sc-VigVT ejNBCe" data-reactid="413">01</span><span class="sc-jTzLTM cWDGRc" data-reactid="414">Server</span></a></li>
-            <li><a class="sc-gqjmRU kBKRuS" href=""><span class="sc-VigVT ejNBCe" data-reactid="413">02</span><span class="sc-jTzLTM cWDGRc" data-reactid="414">DNS</span></a></li>
-            <li><a class="sc-gqjmRU kBKRuS" href=""><span class="sc-VigVT ejNBCe" data-reactid="413">03</span><span class="sc-jTzLTM cWDGRc" data-reactid="414">Scroll Effects</span></a></li>
-            <li><a class="sc-gqjmRU kBKRuS" href=""><span class="sc-VigVT ejNBCe" data-reactid="413">04</span><span class="sc-jTzLTM cWDGRc" data-reactid="414">Flexbox</span></a></li>
-          </ul>
+<div class="main">
+  <div class="container-cloud fill">
+    <div class="element" style="width: 99vw;">
+      <div class="content-center">
+        <div class="content-center-item">
+          <div class="wrapper">
+            <ul class="days">
+              <li><a class="nav0" href=""><span class="nav2">01</span><span class="nav4">Server Setup</span></a></li>
+              <li><a class="nav0" href=""><span class="nav2">02</span><span class="nav4">DNS Setup</span></a></li>
+              <li><a class="nav0" href="scroll-effects.html"><span class="nav2">03</span><span class="nav4">Scroll Effects</span></a></li>
+              <li><a class="nav0" href=""><span class="nav2">04</span><span class="nav4">Flexbox Layout</span></a></li>
+              <li><a class="nav0" href=""><span class="nav2">05</span><span class="nav4">JS Countdown</span></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container-cloud fill">
-  <div class="logo-ani">
-    <amp-position-observer on="scroll:spinAnimation.seekTo(percent=event.percent)" 
-						 intersection-ratios="0.5" 
-						 layout="nodisplay"> </amp-position-observer>
-    <amp-img id="mainLogoImage" width="369" height="336" layout="responsive" src="https://www.ezup.com/media/logo/stores/1/logo-large.png" alt=""></amp-img>
-  </div>
-</div>
-<div class="container-fluid">
-  <div class="row">
-    <div class="row_cell">
-      <amp-img amp-fx="fade-in-scroll"
-   data-repeat 
-		data-margin-start="50%"
-  data-margin-end="80%"
-  width="1280"
-  height="873"
-  layout="responsive"
-  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
-  alt="clouds"></amp-img>
-    </div>
-    <div class="row_cell">
-      <amp-img amp-fx="fade-in-scroll"
-  data-repeat
-  width="1280"
-  height="873"
-  layout="responsive"
-  src="https://images.unsplash.com/photo-1473806189829-9641421a59f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=75ddee8b694c5bef8cb935f6d0effa3a&auto=format&fit=crop&w=1650&q=80"
-  alt="clouds"></amp-img>
-    </div>
-    <div class="row_cell"><!--<img src="https://via.placeholder.com/767x400/111111/fff" class="img-responsive" alt="">-->
-      <amp-img amp-fx="fade-in-scroll"
-  data-repeat
-		 data-margin-start="30%"
-  data-margin-end="90%"
-  width="1280"
-  height="873"
-  layout="responsive"
-  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
-  alt="clouds"></amp-img>
-    </div>
-  </div>
-</div>
-<amp-animation id="spinAnimation" layout="nodisplay"> 
-  <script type="application/json">
-      {
-        "duration": "4",
-        "fill": "both",
-        "direction": "reverse",
-        "animations": [
-          {
-            "selector": "#mainLogoImage",
-            "keyframes": [
-              { "transform": "rotate(720deg)" }
-            ]
-          }
-        ]
-      }
-    </script> 
-</amp-animation>
-<div class="spacer"></div>
-<div class="spacer"></div>
-<div class="spacer"></div>
 <footer class="footer">
   <div id="clockdiv" class="text-center">
     <div style="display: none;"> <span class="weeks"></span>
@@ -355,53 +61,5 @@ a:focus, a:hover {
     </div>
   </div>
 </footer>
-<script>
-		function getTimeRemaining(endtime) {
-  const total = Date.parse(endtime) - Date.parse(new Date());
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  const weeks = Math.floor(total / (1000 * 60 * 60 * 24) / 7);
-  
-  return {
-    total,
-    days,
-    hours,
-    minutes,
-    seconds,
-	weeks
-  };
-}
-
-function initializeClock(id, endtime) {
-  const clock = document.getElementById(id);
-  const daysSpan = clock.querySelector('.days');
-  const hoursSpan = clock.querySelector('.hours');
-  const minutesSpan = clock.querySelector('.minutes');
-  const secondsSpan = clock.querySelector('.seconds');
-  const weeksSpan = clock.querySelector('.weeks');
-
-  function updateClock() {
-    const t = getTimeRemaining(endtime);
-
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-	weeksSpan.innerHTML = t.weeks;
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
-
-  updateClock();
-  const timeinterval = setInterval(updateClock, 1000);
-}
-
-const deadline = '2021-03-01'; //new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
-	</script>
 </body>
 </html>
