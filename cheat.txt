@@ -1,0 +1,8 @@
+git fetch
+git pull
+git checkout -b day6
+git add -A
+git commit -m "day 6"
+git push origin day6
+
+ 
