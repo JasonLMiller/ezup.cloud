@@ -15,8 +15,6 @@
 <link rel="stylesheet" href="https://use.typekit.net/xib2ppc.css">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/effects.css">
-<link rel="stylesheet" href="css/splash.css">
-<link rel="stylesheet" href="css/countdown.css">
 <script async src="js/countdown.js"></script>
 </head>
 <body>
@@ -31,44 +29,8 @@
 						 layout="nodisplay"> </amp-position-observer>
       <amp-img id="mainLogoImage" width="369" height="336" layout="responsive" src="https://www.ezup.com/media/logo/stores/1/logo-large.png" alt=""></amp-img>
     </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="row_cell">
-        <amp-img amp-fx="fade-in-scroll"
-   data-repeat 
-		data-margin-start="50%"
-  data-margin-end="80%"
-  width="1280"
-  height="873"
-  layout="responsive"
-  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
-  alt="clouds"></amp-img>
-      </div>
-      <div class="row_cell">
-        <amp-img amp-fx="fade-in-scroll"
-  data-repeat
-  width="1280"
-  height="873"
-  layout="responsive"
-  src="https://images.unsplash.com/photo-1473806189829-9641421a59f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=75ddee8b694c5bef8cb935f6d0effa3a&auto=format&fit=crop&w=1650&q=80"
-  alt="clouds"></amp-img>
-      </div>
-      <div class="row_cell"><!--<img src="https://via.placeholder.com/767x400/111111/fff" class="img-responsive" alt="">-->
-        <amp-img amp-fx="fade-in-scroll"
-  data-repeat
-		 data-margin-start="30%"
-  data-margin-end="90%"
-  width="1280"
-  height="873"
-  layout="responsive"
-  src="https://images.unsplash.com/photo-1527048322413-4e4e56c8ab3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=69287e502ab9e858262921ee9dfcd271&auto=format&fit=crop&w=1650&q=80"
-  alt="clouds"></amp-img>
-      </div>
-    </div>
-  </div>
-  <amp-animation id="spinAnimation" layout="nodisplay"> 
-    <script type="application/json">
+    <amp-animation id="spinAnimation" layout="nodisplay"> 
+      <script type="application/json">
       {
         "duration": "4",
         "fill": "both",
@@ -83,10 +45,89 @@
         ]
       }
     </script> 
-  </amp-animation>
+    </amp-animation>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="row_cell">
+        <amp-img amp-fx="fade-in-scroll"
+				 data-repeat 
+				 data-margin-start="20%"
+				 data-margin-end="60%"
+				 width="430"
+				 height="400"
+				 layout="responsive"
+				 src="img/shelter-1.jpg"
+				 alt="clouds"></amp-img>
+      </div>
+      <div class="row_cell">
+        <amp-img amp-fx="fade-in-scroll" data-repeat data-margin-start="40%" data-margin-end="70%" width="430" height="400" layout="responsive" src="img/shelter-2.jpg" alt="clouds"></amp-img>
+      </div>
+      <div class="row_cell"><!--<img src="https://via.placeholder.com/767x400/111111/fff" class="img-responsive" alt="">-->
+        <amp-img amp-fx="fade-in-scroll" data-repeat data-margin-start="60%" data-margin-end="80%" width="430" height="400" layout="responsive" src="img/shelter-3.jpg" alt="clouds"></amp-img>
+      </div>
+    </div>
+  </div>
   <div class="spacer"></div>
-  <div class="spacer"></div>
-  <div class="spacer"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-right">
+        <amp-position-observer on="scroll:slideTransition.seekTo(percent=event.percent)" intersection-ratios="0.2" layout="responsive"> </amp-position-observer>
+        <amp-fit-text layout="fill">
+          <div class="card-title an-title" style="padding-right: 10%; opacity: 0;"> Utility Walls </div>
+        </amp-fit-text>
+        <amp-position-observer on="scroll:fadeTransition.seekTo(percent=event.percent)" intersection-ratios="0.2" layout="responsive"> </amp-position-observer>
+        <amp-animation id="slideTransition" layout="nodisplay"> 
+          <script type="application/json">
+				{
+					"duration": "1000ms",
+					"fill": "both",
+					"easing": "ease-out",
+					"iterations": "1",
+					"animations": [
+					  {
+						"selector": ".card-title",
+						"keyframes": [
+						 	{"opacity": 0.5, "transform": "translateX(-20%)"},
+    						{"opacity": 1, "transform": "translateX(0)"}
+							
+						]
+					  }
+					]
+				  }
+			  </script> 
+        </amp-animation>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="card ampstart-card">
+          <amp-img id="cardImage" width="680" height="503" layout="responsive" src="img/shelters.png" alt=""></amp-img>
+        </div>
+      </div>
+    </div>
+    <amp-animation id="fadeTransition" layout="nodisplay"> 
+      <script type="application/json">
+		{
+		  "duration": "2",
+		  "fill": "both",
+		  "direction": "reverse",
+		  "animations": [
+			{
+			  "selector": "#cardImage",
+			  "keyframes": [
+				{ "opacity": "0.0", "offset": 0 },
+				{ "opacity": "1", "offset": 0.4 },
+				{ "opacity": "1", "offset": 0.6 },
+				{ "opacity": "0.0", "offset": 1 }
+			  ]
+			}
+      		]
+    	}
+		</script> 
+    </amp-animation>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+  </div>
 </div>
 <footer class="footer"> </footer>
 </body>

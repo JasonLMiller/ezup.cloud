@@ -8,3 +8,11 @@ body {
 amp-img.contain img {
   object-fit: contain;
 }
+.an-title {
+  font-family: industry, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  margin-top: 15px;
+  font-size: 38px
+}

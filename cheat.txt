@@ -5,4 +5,8 @@ git add -A
 git commit -m "day 6"
 git push origin day6
 
- 
+1HGCV1F59JA028013
+
+
+https://ezup.design/wp-json/wp/v2/posts?posts=247
+https://ezup.design/wp-json/wp/v2/posts?include[]=247

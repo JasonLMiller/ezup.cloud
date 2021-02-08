@@ -121,14 +121,15 @@ h1 {
   background-color: #f9f9f9;
   -webkit-box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
   box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
+  z-index: 999;
 }
 a {
   text-decoration: none;
-	color: #000;
+  color: #000;
 }
 a:focus, a:hover {
-    color: #e31837;
-    text-decoration: none;
+  color: #e31837;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .main {
