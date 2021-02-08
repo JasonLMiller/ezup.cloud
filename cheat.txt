@@ -1,12 +1,15 @@
 git fetch
 git pull
-git checkout -b day6
+git checkout -b day8
 git add -A
-git commit -m "day 6"
-git push origin day6
+git commit -m "day 8"
+git push origin day8    Ezup2020
 
 1HGCV1F59JA028013
 
 
 https://ezup.design/wp-json/wp/v2/posts?posts=247
 https://ezup.design/wp-json/wp/v2/posts?include[]=247
+
+install node.js
+npm install -g grunt-cli

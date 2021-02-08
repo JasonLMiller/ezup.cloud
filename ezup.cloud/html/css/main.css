@@ -134,5 +134,6 @@ a:focus, a:hover {
 @media (min-width: 768px) {
   .main {
     margin-left: 100px;
+    margin-top: 100px;
   }
 }
