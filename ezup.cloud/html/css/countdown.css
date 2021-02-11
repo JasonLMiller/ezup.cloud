@@ -27,7 +27,7 @@ ul.days {
   list-style: none;
 }
 ul.days > li {
-  font-size: 22px;
+  font-size: 18px;
   font-family: roboto-mono, monospace;
   font-weight: 700;
   font-style: normal;

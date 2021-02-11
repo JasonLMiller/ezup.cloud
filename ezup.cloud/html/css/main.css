@@ -24,7 +24,7 @@
 .content-center {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 .content-center-item {
   flex: none;
