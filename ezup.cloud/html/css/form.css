@@ -1,0 +1,133 @@
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+button {
+  background: none;
+  text-decoration: inherit;
+  font-family: roboto-mono, monospace;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+.border-gradient-green {
+  border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+  -webkit-transition: border-image-source 3s ease-in-out;
+  transition: border-image-source 3s ease-in-out;
+}
+.border-gradient-green:hover {
+  border-image-source: linear-gradient(to left, yellow, #B2FF59);
+}
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.border-gradient-rounded {
+  padding: 1rem 2rem;
+  border: double 5px transparent;
+  border-radius: 40px;
+  background-image: linear-gradient(black, black), linear-gradient(to left, #743ad5, #d53a9d);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  -webkit-transition: background-image 3s ease-in-out;
+  transition: background-image 3s ease-in-out;
+  opacity: 1;
+}
+.border-gradient-rounded:hover {
+  background-image: linear-gradient(black, black), linear-gradient(to left, #00C853, #B2FF59);
+  opacity: 1;
+}
+.canvas {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  height: 90vh;
+  color: #fff;
+}
+.item {
+  flex: 1;
+}
+.top-img {
+  align-self: flex-start;
+}
+.bottom-img {
+  align-self: flex-end;
+}
+@media (max-width: 767px) {
+  .canvas {
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+  }
+  .item {
+    flex-basis: 100%;
+  }
+}
+.sf-form label {
+  font-weight: bold !important;
+  color: #231f2a !important;
+}
+.sf-form textarea, .sf-form select, .sf-form input {
+  margin-bottom: 25px;
+  border-radius: 0;
+  border: 2px solid #ccc !important;
+  background: #fff !important;
+  color: #444444 !important;
+  font-size: 14px !important;
+  border-radius: 0;
+}
+.sf-form p.submit input {
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  width: 100px !important;
+  margin-top: 0px !important;
+  background: #005daa !important;
+  color: #fff !important;
+  -webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s !important;
+  -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s !important;
+  -o-transition: background 0.1s linear 0s, color 0.1s linear 0s !important;
+  transition: background 0.1s linear 0s, color 0.1s linear 0s !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 10px 10px !important;
+  -webkit-appearance: none;
+}
+.sf-form p.submit input:hover {
+  background: #231f2a !important;
+  color: #fff !important;
+  border: none !important;
+}
+.sf-form input[type="date"] {
+  height: 38px;
+  line-height: 1.4;
+  padding: 10px;
+  vertical-align: baseline;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sf-form select {
+  height: 38px;
+}

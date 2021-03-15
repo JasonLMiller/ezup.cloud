@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>EZUP.CLOUD 28 Days: Day 11</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/splash.min.css">
+<link rel="stylesheet" href="https://use.typekit.net/xib2ppc.css">
+<style>
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+@keyframes gradient {
+0% {
+background-position: 0% 50%;
+}
+50% {
+background-position: 100% 50%;
+}
+100% {
+background-position: 0% 50%;
+}
+}
+button {
+    background: none;
+    text-decoration: inherit;
+    font-family: roboto-mono, monospace;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+}
+.border-gradient-green {
+    border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+	-webkit-transition: border-image-source 3s ease-in-out;
+    transition: border-image-source 3s ease-in-out;
+}
+.border-gradient-green:hover {
+    border-image-source: linear-gradient(to left, yellow, #B2FF59);
+}
+.border-gradient-purple {
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.border-gradient-rounded {
+    padding: 1rem 2rem;
+    border: double 5px transparent;
+    border-radius: 40px;
+    background-image: linear-gradient(black, black), linear-gradient(to left, #743ad5, #d53a9d);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    -webkit-transition: background-image 3s ease-in-out;
+    transition: background-image 3s ease-in-out;
+    opacity: 1;
+}
+.border-gradient-rounded:hover {
+    background-image: linear-gradient(black, black), linear-gradient(to left, #00C853, #B2FF59);
+    opacity: 1;
+}
+.canvas {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    height: 90vh;
+}
+.item {
+    flex: 1;
+}
+.top-img {
+    align-self: flex-start;
+}
+.bottom-img {
+    align-self: flex-end;
+}
+
+@media (max-width: 767px) {
+.canvas {
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.item {
+    flex-basis: 100%;
+}
+}
+</style>
+</head>
+<body>
+<header class="header-fixed">
+  <h1 class="h1 text-uppercase">Project 28</h1>
+</header>
+<div class="main">
+  <div class="canvas">
+    <div class="item top-imgx center-block; text-center">
+      <button class="border-gradient border-gradient-green">
+      <h4>You really want to click me</h4>
+      </button>
+    </div>
+    <div class="item top-imgx center-block; text-center">
+      <button class="border-gradient-rounded">
+      <h4>You really want to click me</h4>
+      </button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

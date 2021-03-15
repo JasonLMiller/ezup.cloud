@@ -2,12 +2,13 @@
 <dwsync>
 <file name="countdown.css" server="104.248.184.214//var/www/" local="132574913932119664" remote="132574914130000000" Dst="1" />
 <file name="effects.css" server="104.248.184.214//var/www/" local="132571272883536664" remote="132571355440000000" Dst="1" />
-<file name="main.css" server="104.248.184.214//var/www/" local="132574913190588361" remote="132574914140000000" Dst="1" />
+<file name="main.css" server="104.248.184.214//var/www/" local="132574926060000000" remote="132574926060000000" Dst="1" />
 <file name="splash.css" server="104.248.184.214//var/www/" local="132571090042213068" remote="132571098000000000" Dst="1" />
-<file name="countdown.min.css" server="104.248.184.214//var/www/" local="132574913994517859" remote="132574914130000000" Dst="1" />
-<file name="effects.min.css" server="104.248.184.214//var/www/" local="132574913994538092" remote="132574914140000000" Dst="1" />
-<file name="main.min.css" server="104.248.184.214//var/www/" local="132574913994617591" remote="132574914140000000" Dst="1" />
-<file name="splash.min.css" server="104.248.184.214//var/www/" local="132574913994687404" remote="132574914140000000" Dst="1" />
+<file name="countdown.min.css" server="104.248.184.214//var/www/" local="132574926630611247" remote="132574926700000000" Dst="1" />
+<file name="effects.min.css" server="104.248.184.214//var/www/" local="132574926630641153" remote="132574926700000000" Dst="1" />
+<file name="main.min.css" server="104.248.184.214//var/www/" local="132574926630720945" remote="132574926700000000" Dst="1" />
+<file name="splash.min.css" server="104.248.184.214//var/www/" local="132574926630800626" remote="132574926700000000" Dst="1" />
 <file name="slider.css" server="104.248.184.214//var/www/" local="132574896162045443" remote="132574908160000000" Dst="1" />
-<file name="slider.min.css" server="104.248.184.214//var/www/" local="132574913994657484" remote="132574914140000000" Dst="1" />
+<file name="slider.min.css" server="104.248.184.214//var/www/" local="132574926630760845" remote="132574926700000000" Dst="1" />
+<file name="loader.css" server="104.248.184.214//var/www/" local="132581821420000000" remote="132581821420000000" Dst="1" />
 </dwsync>
